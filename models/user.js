@@ -15,10 +15,10 @@ const userSchema = new mongoose.Schema({
         required:true
     }
 },{
-    timestamps:ture
+    timestamps:true
 });
 
 const User = mongoose.model('User',userSchema);
 
-module.exports = user;
+module.exports = User;
 
