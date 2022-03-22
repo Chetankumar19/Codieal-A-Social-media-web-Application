@@ -1,8 +1,29 @@
-<h1>Sign In</h1>
+<link rel="stylesheet" href="../assets/scss/user_sign_in.scss">
+<div id="container">
+    <div id="name1">
+        Codieal
+    </div>
 
-<form action="/users/create-session" method="POST">
-    <input type="email" name="email" placeholder="Email"  required>
-    <input type="password" name="password" placeholder="Password"  required>
-    <input type="submit" value="Sign In">
 
-</form>
+
+    <div id="formInfo">
+        <form action="/users/create-session" method="POST">
+            <!-- <label for="email">Email</label> -->
+            <input type="email" name="email" placeholder="Email" required>
+            <!-- <label for="Password">Password</label> -->
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Log In" id="submit">
+        </form>
+        <div id="demo">
+            <div>
+                Demo Email : Chetan18026@gmail.com
+            </div>
+            <div>
+                Password: 12345
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

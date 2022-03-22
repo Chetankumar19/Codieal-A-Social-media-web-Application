@@ -1,0 +1,30 @@
+header{
+    background-color: rgb(78, 224, 205);
+    // position: fixed;
+    width: 100%;
+}
+#box{
+    display: flex;
+    font-size: 25px;
+    flex-wrap: wrap;
+    height: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    justify-content: space-between;
+}
+#name{
+    font-size: 40px;
+    margin: 4px;
+    text-shadow: 0 0 4px #000;
+}
+#info{
+    font-size: 20px;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
