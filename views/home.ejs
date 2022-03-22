@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/scss/home.scss">
-    <title>
-        <%= title%>
-    </title>
+    <title><%= title%></title>
 </head>
+<body>  
 
-<body>
-
-    <% if(locals.user){ %>
-        <section id="feed-post">
-
-            <h4>Post</h4>
-            <form action="/posts/create" id="new-post-form" method="POST">
-                <textarea name="content" cols="'30" rows="3" placeholder="Type here..."></textarea>
-                <input type="submit" value="Post">
-            </form>
-
-        </section>
-        <div id="post-list-contanier">
-            <ul>
-                <% for(post of posts){%>
-                    <li>
-                        <p>
-                            <%= post.content %>
-                                <br>
-                                <small>
-                                    <%= post.user.name%>
-                                </small>
-                        </p>
-                    </li>
-                    <% }%>
-            </ul>
-            <% }else{ %>
-                <div id="outer">
-                    <div id="welcome"> Welcome to Codieal</div>
-                    <div id="instruction">
-                        <div id="signin">If already Exist member Click On Sign In and Enjoy</div>
-                        <div id="signup">Don't have account Click On Sign Up and make friends
-                        </div>
-                    </div>
-                </div>
-                <%}%>
+<% if(locals.user){ %>
+  <section id="feed-post">
+     
+      <h4>Post</h4>
+      <form action="/posts/create" id="new-post-form" method="POST">
+          <textarea name="content" cols="'30"  rows="3" placeholder="Type here..."></textarea>
+          <input type="submit" value="Post">
+      </form>
+      
+  </section>
+  <div id="post-list-contanier">
+      <ul>
+          <% for(post of posts){%>
+            <li>
+                <p>
+                    <%= post.content %>
+                <br>
+                <small>
+                    <%= post.user.name%>
+                </small>
+                </p>
+            </li>
+          <% }%>
+      </ul>
+      <% } else{ %>
+        <div id="outer">
+        <div id="welcome"> Welcome to Codieal</div>
+        <div id="instruction">
+            <div id="signin">If already Exist member Click On Sign In and Enjoy</div>
+            <div id="signup">Don't have account Click On Sign Up and make friends
+            </div>
         </div>
-
+    </div>
+      <%}%>
+  </div>
+   
 </body>
-
 </html>
